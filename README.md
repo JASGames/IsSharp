@@ -1,6 +1,8 @@
 # IsSharp
 
-IsSharp is a guard clause library for C# that provides clean and fluent code with human readable exception messages.
+IsSharp is a guard clause library for C# that provides clean and fluent code with human readable exception messages using expression trees.
+
+Install from [Nuget](https://www.nuget.org/packages/IsSharp/) or build using the source.
 
 
 ## Example Usage
