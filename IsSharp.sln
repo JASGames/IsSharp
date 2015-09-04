@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsSharp", "IsSharp\IsSharp.csproj", "{F4534C61-08B3-40E2-94BD-34F78EFBC033}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsSharp.Test", "IsSharp.Test\IsSharp.Test.csproj", "{511B77F3-7043-48A9-8164-03B16A3BFB0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F4534C61-08B3-40E2-94BD-34F78EFBC033}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4534C61-08B3-40E2-94BD-34F78EFBC033}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4534C61-08B3-40E2-94BD-34F78EFBC033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{511B77F3-7043-48A9-8164-03B16A3BFB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{511B77F3-7043-48A9-8164-03B16A3BFB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{511B77F3-7043-48A9-8164-03B16A3BFB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{511B77F3-7043-48A9-8164-03B16A3BFB0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
