@@ -18,7 +18,7 @@ namespace IsSharp
         {
             if (!(expression.Compile().Invoke(_value)))
             {
-                var conditionString = new ConditionToEnglish().Translate(expression.Body, _name, _value);
+                var conditionString = ConditionToEnglish.Translate(expression.Body, _name, _value);
                 throw (Exception)Activator.CreateInstance(typeof(TException), conditionString);
             }
 

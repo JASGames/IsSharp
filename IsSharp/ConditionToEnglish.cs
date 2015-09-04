@@ -14,13 +14,18 @@ namespace IsSharp
         private string _name;
         private object _value;
 
-        internal ConditionToEnglish()
+        private ConditionToEnglish()
         {
             _name = string.Empty;
             _value = null;
         }
 
-        internal string Translate(Expression expression, string parameterName = "", object value = null)
+        internal static string Translate(Expression expression, string parameterName = "", object value = null)
+        {
+            return new ConditionToEnglish().TranslateInternal(expression, parameterName, value);
+        }
+
+        private  string TranslateInternal(Expression expression, string parameterName = "", object value = null)
         {
             _sb = new StringBuilder();
             _name = parameterName;

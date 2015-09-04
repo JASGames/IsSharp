@@ -9,7 +9,7 @@ namespace IsSharp
         {
             if (condition.Compile().Invoke()) 
                 return;
-            var conditionString = new ConditionToEnglish().Translate(condition.Body);
+            var conditionString = ConditionToEnglish.Translate(condition.Body);
             throw (Exception)Activator.CreateInstance(typeof(TException), conditionString);
         }
 
