@@ -1,5 +1,6 @@
 using System;
 using System.Linq.Expressions;
+using System.Reflection;
 
 namespace IsSharp
 {
@@ -30,6 +31,11 @@ namespace IsSharp
             var lamdba = Expression.Lambda<Func<T, bool>>(body, parameter);
 
             return condition.Check<NullReferenceException>(lamdba);
+        }
+
+        public static IsCondition<string> NotNullOrWhiteSpace(this IsCondition<string> condition)
+        {
+            return condition.Check(x => !string.IsNullOrWhiteSpace(x));
         }
 
         public static IsCondition<T> NotEqualTo<T>(this IsCondition<T> condition, T compare)
