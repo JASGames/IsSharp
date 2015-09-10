@@ -3,26 +3,26 @@ using Xunit;
 
 namespace IsSharp.Test
 {
-    public class GuardGreaterThanOrEqualToFixture
+    public class GuardIsNullOrWhiteSpaceFixture
     {
         const decimal ConstantValue = 15m;
 
         [Fact]
         public void CanPrintAFriendExceptionMessage()
         {
-            var CostPrice = 15m;
-            var ex = Assert.Throws<ArgumentException>(() => Guard.Is(() => CostPrice >= 25m));
+            string Name = null;
+            var ex = Assert.Throws<ArgumentException>(() => Guard.Is(() => !string.IsNullOrWhiteSpace(Name)));
             Assert.NotNull(ex);
-            Assert.Equal(ex.Message, "CostPrice : 15 should be greater than or equal to 25");
+            Assert.Equal(ex.Message, "Name : null should not be null or whitespace ");
         }
 
         [Fact]
         public void CanPrintAFriendExceptionMessageWithCustomerException()
         {
-            decimal? CostPrice = 15m;
-            var ex = Assert.Throws<MyException>(() => Guard.Is<MyException>(() => CostPrice >= 25m));
+            string Name = null;
+            var ex = Assert.Throws<MyException>(() => Guard.Is<MyException>(() => !string.IsNullOrWhiteSpace(Name)));
             Assert.NotNull(ex);
-            Assert.Equal(ex.Message, "CostPrice : 15 should be greater than or equal to 25");
+            Assert.Equal(ex.Message, "Name : null should not be null or whitespace ");
         }
 
         [Fact]

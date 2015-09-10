@@ -13,7 +13,7 @@ namespace IsSharp.Test
             var CostPrice = 55m;
             var ex = Assert.Throws<ArgumentException>(() => Guard.Is(() => CostPrice < 45m));
             Assert.NotNull(ex);
-            Assert.Equal(ex.Message, "CostPrice(55) should be less than 45");
+            Assert.Equal(ex.Message, "CostPrice : 55 should be less than 45");
         }
 
         [Fact]
@@ -22,7 +22,7 @@ namespace IsSharp.Test
             decimal? CostPrice = 55m;
             var ex = Assert.Throws<MyException>(() => Guard.Is<MyException>(() => CostPrice < 45m));
             Assert.NotNull(ex);
-            Assert.Equal(ex.Message, "CostPrice(55) should be less than 45");
+            Assert.Equal(ex.Message, "CostPrice : 55 should be less than 45");
         }
 
         [Fact]
